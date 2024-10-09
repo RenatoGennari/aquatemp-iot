@@ -7,6 +7,8 @@ Wi-Fi: Conecta a uma rede Wi-Fi definida pelas credenciais (SSID e senha).
 MQTT: Utiliza o broker público HiveMQ para enviar leituras e receber comandos de controle do LED.
 JSON: Serializa as leituras dos sensores em formato JSON e as publica em um tópico MQTT.
 
+Utilizamos o banco de dados MySQL para armazenamento dos dados coletados dos sensores. Banco de dados cedidos gentilmente pelo aluno **Leornardo Mariguela**
+
 Montagem do sensor DHT11 na Placa ESP32 NODE32S
 
 ![image](https://github.com/user-attachments/assets/43e63528-9bb8-4724-85b9-f71daad6a7c0)
@@ -22,6 +24,11 @@ Montagem do led na Placa ESP32 NODE32S
 Acesso ao DashBoard - NODE-RED, possui a verificação dos dados coletados e acionamento remoto de liga e desliga do led.
 
 http://3.134.113.134:1880/ui
+
+Banco de dados SQL
+
+![image](https://github.com/user-attachments/assets/822c4f81-7e43-430b-b797-c96243ea5c81)
+
 
 
 
