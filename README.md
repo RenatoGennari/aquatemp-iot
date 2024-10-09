@@ -21,6 +21,11 @@ Montagem do led na Placa ESP32 NODE32S
 
 ![image](https://github.com/user-attachments/assets/ec1a92b1-ed3f-4662-a77e-4286a953af25)
 
+Fluxo criado em NODE-RED
+
+![image](https://github.com/user-attachments/assets/16b2be55-1c8c-40bc-b4ae-4b0e1dd5c01d)
+
+
 Acesso ao DashBoard - NODE-RED, possui a verificação dos dados coletados e acionamento remoto de liga e desliga do led.
 
 http://3.134.113.134:1880/ui
