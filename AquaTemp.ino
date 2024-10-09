@@ -18,8 +18,8 @@ DallasTemperature sensor(&oneWire);
 DeviceAddress endereco_temp;
 
 // Variáveis Wi-Fi e MQTT
-const char* ssid = "Akira_2.4G";       // Substitua pelo seu SSID
-const char* password = "lucca2000";    // Substitua pela sua senha
+const char* ssid = "SUA-REDE";       // Substitua pelo seu SSID
+const char* password = "SUA-SENHA";    // Substitua pela sua senha
 const char* mqttServer = "broker.hivemq.com";  // Endereço do broker MQTT
 const int port = 1883;
 char clientId[50];
