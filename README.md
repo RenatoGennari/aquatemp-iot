@@ -1,4 +1,4 @@
-AquaTemp - Controle de temperatura de aquários e função para acender e apagar iluminação
+**AquaTemp - Controle de temperatura de aquários e função para acender e apagar iluminação**
 
 O projeto de trabalho do curso de pós graduação do IFSP - Campus Catanduva turma 2024, foi elaborado pelos alunos Ezequiel Pereira e Renato Gennari, possui o código de um sistema de monitoramento de temperatura e umidade usando um sensor DHT11 e um sensor de temperatura Dallas (OneWire). Ele envia dados via MQTT para um broker, além de permitir controle de um LED através de mensagens MQTT. Aqui está um resumo das principais funcionalidades:
 
