@@ -1,0 +1,663 @@
+[
+    {
+        "id": "abaff4726f8912d2",
+        "type": "tab",
+        "label": "AquaTemp_IoT - IFSP Catanduva 2024",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "172b6fd3d6707ea4",
+        "type": "ui_tab",
+        "name": "Grafico",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8c6bb7d88ff39bb2",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "e55685e01dda3251",
+        "type": "ui_group",
+        "name": "Temperatura ambiente",
+        "tab": "49d50312.5b8abc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fafe782f317a8dd8",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "172b6fd3d6707ea4",
+        "order": 2,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "49d50312.5b8abc",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9e6a3d2fd4b92fa9",
+        "type": "ui_group",
+        "name": "Iluminação do Aquário",
+        "tab": "49d50312.5b8abc",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4ba536c3db533455",
+        "type": "ui_group",
+        "name": " Temperatura da Água",
+        "tab": "49d50312.5b8abc",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Dados Sensor",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Sensor Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "732962c1da4e1eed",
+        "type": "mqtt-broker",
+        "name": "Broker",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1b3f89d43f55b990",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "6c894904b2770cc7",
+        "type": "MySQLdatabase",
+        "name": "AquaDB",
+        "host": "18.228.117.52",
+        "port": "3306",
+        "db": "aqua_temp",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "b93df856363a81b2",
+        "type": "amazon config",
+        "name": "AWS",
+        "region": "sa-east-1",
+        "proxyRequired": false,
+        "proxy": ""
+    },
+    {
+        "id": "d12f78dcbacdab16",
+        "type": "ui_group",
+        "name": "Banco de dados",
+        "tab": "49d50312.5b8abc",
+        "order": 4,
+        "disp": true,
+        "width": "15",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "9d6f4a2d30e475c9",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "49d50312.5b8abc",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bce61706e177f2a6",
+        "type": "mqtt out",
+        "z": "abaff4726f8912d2",
+        "name": "Led",
+        "topic": "led/led",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "732962c1da4e1eed",
+        "x": 410,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "26050cfe18727920",
+        "type": "ui_button",
+        "z": "abaff4726f8912d2",
+        "name": "Liga",
+        "group": "9e6a3d2fd4b92fa9",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "off",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 70,
+        "y": 40,
+        "wires": [
+            [
+                "bce61706e177f2a6"
+            ]
+        ]
+    },
+    {
+        "id": "7bfa05eaba46cd11",
+        "type": "ui_button",
+        "z": "abaff4726f8912d2",
+        "name": "Desliga",
+        "group": "9e6a3d2fd4b92fa9",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 80,
+        "y": 80,
+        "wires": [
+            [
+                "bce61706e177f2a6"
+            ]
+        ]
+    },
+    {
+        "id": "5052108637e55c8e",
+        "type": "mqtt in",
+        "z": "abaff4726f8912d2",
+        "name": "",
+        "topic": "sensor/temperatura",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "732962c1da4e1eed",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "5688fd03b03e0d02",
+                "68990ef1a89b44e1",
+                "a73e4f5a93b1716f",
+                "740e43bfe4b23936"
+            ]
+        ]
+    },
+    {
+        "id": "5688fd03b03e0d02",
+        "type": "change",
+        "z": "abaff4726f8912d2",
+        "name": "Temperatura da Água",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperatura_agua",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "ca1d061486915464"
+            ]
+        ]
+    },
+    {
+        "id": "68990ef1a89b44e1",
+        "type": "change",
+        "z": "abaff4726f8912d2",
+        "name": "Ar",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperatura_ar",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 200,
+        "wires": [
+            [
+                "d64403f5fa9afab6"
+            ]
+        ]
+    },
+    {
+        "id": "a73e4f5a93b1716f",
+        "type": "change",
+        "z": "abaff4726f8912d2",
+        "name": "Umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.umidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "3fcf448de31dd980"
+            ]
+        ]
+    },
+    {
+        "id": "d64403f5fa9afab6",
+        "type": "ui_gauge",
+        "z": "abaff4726f8912d2",
+        "name": "",
+        "group": "e55685e01dda3251",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "units",
+        "format": "{{value}}ºC",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ca1d061486915464",
+        "type": "ui_gauge",
+        "z": "abaff4726f8912d2",
+        "name": "",
+        "group": "4ba536c3db533455",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": " Temperatura",
+        "label": "units",
+        "format": "{{value}}ºC",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "3fcf448de31dd980",
+        "type": "ui_gauge",
+        "z": "abaff4726f8912d2",
+        "name": "",
+        "group": "e55685e01dda3251",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "units",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 620,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a0d447d2b5fc283c",
+        "type": "mysql",
+        "z": "abaff4726f8912d2",
+        "mydb": "6c894904b2770cc7",
+        "name": "AquaBD",
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "f6491d983015bddf",
+                "d3dc53314308347c"
+            ]
+        ],
+        "inputLabels": [
+            "1"
+        ],
+        "outputLabels": [
+            "1"
+        ]
+    },
+    {
+        "id": "740e43bfe4b23936",
+        "type": "function",
+        "z": "abaff4726f8912d2",
+        "name": "Envia BD",
+        "func": "if (msg.payload) {\n    // Supondo que a mensagem MQTT venha como JSON, com as chaves 'temperatura', 'umidade', 'temperaturaar'\n    var temperatura = msg.payload.temperatura_agua || 0;\n    var umidade = msg.payload.umidade || 0;\n    var temperaturaar = msg.payload.temperatura_ar || 0;\n\n    // Monta a consulta SQL para inserir os dados no MySQL\n    msg.topic = `INSERT INTO sensor (temperatura, umidade, temperaturaar) VALUES (${temperatura}, ${umidade}, ${temperaturaar});`;\n  \n\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0b896cd69f989cb",
+        "type": "inject",
+        "z": "abaff4726f8912d2",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT id, datahora, temperatura, umidade, temperaturaar FROM sensor s ORDER BY id DESC LIMIT 10",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "a0d447d2b5fc283c"
+            ]
+        ]
+    },
+    {
+        "id": "f6491d983015bddf",
+        "type": "function",
+        "z": "abaff4726f8912d2",
+        "name": "function 1",
+        "func": "let tabela = [];\n\nmsg.payload.forEach(function(row) {\n    \n    tabela.push({\n        \"ID\": row.id,\n        \"DataHora\": row.datahora,\n        \"Temperatura\": row.temperatura,\n        \"Umidade\": row.umidade,\n        \"Temp Ar\": row.temperaturaar\n    });\n});\n\nmsg.payload = tabela;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 420,
+        "wires": [
+            [
+                "fce985df18521044"
+            ]
+        ]
+    },
+    {
+        "id": "fce985df18521044",
+        "type": "ui_table",
+        "z": "abaff4726f8912d2",
+        "group": "d12f78dcbacdab16",
+        "name": "Informações AquaDB",
+        "order": 0,
+        "width": "15",
+        "height": "8",
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 1000,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e6d403ac9cd23d4d",
+        "type": "debug",
+        "z": "abaff4726f8912d2",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "d3dc53314308347c",
+        "type": "function",
+        "z": "abaff4726f8912d2",
+        "name": "function 2",
+        "func": "let tabela = [];\n\nmsg.payload.forEach(function(row) {\n    \n    tabela.push({\n        \"ID\": row.id,\n        \"DataHora\": row.datahora,\n        \"Temperatura\": row.temperatura,\n        \"Umidade\": row.umidade,\n        \"Temp Ar\": row.temperaturaar\n    });\n});\n\nmsg.payload = tabela;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 600,
+        "wires": [
+            [
+                "e6d403ac9cd23d4d"
+            ]
+        ]
+    }
+]
